@@ -1,0 +1,76 @@
+ZEUS 3.0 FEATURE MAP
+====================
+
+PRIVATE CONTROL CENTER
+- Owner-only /start and /panel
+- Inline group picker
+- Per-group dashboard
+- Scheduler / timezone
+- Security toggles
+- Filter view
+- Get Files / file retrieval
+- Message editing
+- Locks
+- Audit logs
+- Status
+
+SCHEDULER
+- EVERY DAY only
+- Unlimited windows
+- 12-hour AM/PM
+- Per-group timezone
+- Private-chat configuration
+- Restart-safe SQLite storage
+
+MODERATION
+- warn escalation
+- mute timer
+- ban timer
+- kick
+- unban/unmute
+- lock/unlock
+- purge
+- delete
+- rules
+
+SECURITY / FILTERS
+- anti-link
+- media/file/sticker/GIF/voice/forward locks
+- caps protection
+- word filters: delete/warn/mute
+- duplicate/anti-spam settings stored for extension
+- raid/join verification settings stored for extension
+
+FILES / GET FILES
+- Tracks documents, photos, videos, audio, voice, animations
+- Stores Telegram file_id and metadata
+- Private owner panel browsing
+- Get File button re-sends stored media
+- Pagination
+
+BROADCAST
+- Private user broadcast
+- Group broadcast
+- Startup notification to OWNER_ID
+
+
+ADMIN MANAGEMENT
+- /admin: promote a replied user to admin
+- /admin @username: promote by username
+- /unadmin: remove admin rights from replied user
+- Requires Telegram's Add New Admins permission for non-owner admins
+PRIVATE SETTING NOTIFICATIONS
+- Every private control-panel group setting change sends a confirmation message into that group.
+
+GROUP-SIDE CONTROL CENTER
+- /panel now works inside managed groups for authorized admins.
+- Group admins can change scheduler, security, locks, filters, messages, files, logs and status without going to private chat.
+- The private Owner Control Center remains available.
+- Private control is not the only control path.
+
+
+Guided Group Broadcast
+- /gbroadcast opens the managed-group selector.
+- Selecting a group starts message capture in private chat.
+- The next non-command message is copied as-is to the selected group, preserving text formatting/media/captions.
+- /cancel clears the pending broadcast.

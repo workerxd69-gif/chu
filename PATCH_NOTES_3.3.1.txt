@@ -1,0 +1,30 @@
+ZEUS 3.3.1 PATCH NOTES
+
+Major changes
+1. /gbroadcast is now guided:
+   /gbroadcast -> managed group buttons -> select group -> send any normal message -> exact copy to selected group.
+   Supports text, photo, video, GIF/animation, sticker, document, audio, voice and captions through Telegram copy_message.
+   /cancel clears the pending operation.
+2. Added strict pending-action context validation and 5-minute expiry.
+3. Fixed /start owner authorization await bug.
+4. Scheduler manual Lock/Unlock now uses a persistent manual_override state so automatic scheduling does not immediately overwrite a manual action.
+5. Scheduler permission API calls are only made on state changes/first sync.
+6. Scheduler reminders are marked sent only after successful delivery.
+7. Warning escalation now respects each group's warn_limit: limit => mute, above limit => ban; admins/owners are protected.
+8. Added runtime handling for Anti-Flood, Anti-Spam/repeat, Duplicate, Mention Spam, Bad Words, Anti-Forward, Raid detection and Join Verification.
+9. Join Verification adds a per-user Verify button and temporarily restricts the joining member until verified.
+10. Admin detection fails closed for destructive automatic moderation.
+11. File retrieval respects FILE_MAX_RETRIEVAL_SIZE_MB.
+12. File retention and file-list paging now use config values instead of hardcoded limits.
+13. Admin promotion rights now follow ADMIN_DEFAULT_* config values.
+14. Group-management authorization verifies ZEUS is actually an administrator in the target group.
+15. Added backward-compatible database migration for manual_override.
+16. Added notification for private-panel timezone/message changes.
+17. Added /cancel command.
+18. BOT_TOKEN is kept directly in config.py as requested.
+19. Documentation updated for guided /gbroadcast and environment-token setup.
+
+Important setup
+Set BOT_TOKEN directly in config.py before starting ZEUS.
+Do not put a real bot token into source control or upload it in config.py.
+BAD_WORDS is intentionally empty by default; add your own normalized words/phrases in config.py if Bad Words protection is enabled.

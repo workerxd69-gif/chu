@@ -1,0 +1,24 @@
+ZEUS CONFIG GUIDE
+=================
+Edit config.py to change:
+- Bot token
+- Owner ID
+- Default timezone
+- Scheduler speed
+- Warn escalation
+- Welcome / goodbye / rules defaults
+- Security defaults
+- Lock defaults
+- Broadcast behaviour
+- File tracking limits
+- Branding
+
+The bot token is deliberately kept in config.py because you requested hardcoded mode.
+Never publish config.py.
+
+
+ADMIN MANAGEMENT
+- /admin: promote a replied user to admin
+- /admin @username: promote by username
+- /unadmin: remove admin rights from replied user
+- Requires Telegram's Add New Admins permission for non-owner admins
